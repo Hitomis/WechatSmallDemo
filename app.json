@@ -11,7 +11,8 @@
     "pages/operaFeedback/operaFeedback",
     "pages/operaFeedback/navigate",
     "pages/operaFeedback/redirect",
-    "pages/media/media"
+    "pages/media/media",
+    "pages/canvas/canvas"
 
   ],
   "window": {

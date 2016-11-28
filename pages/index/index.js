@@ -54,6 +54,11 @@ Page({
       url: '../media/media'
     })
   },
+  goCanvas: function () {
+    wx.navigateTo({
+      url: '../canvas/canvas'
+    });
+  },
   onLoad: function () {
     console.log('onLoad')
     var that = this

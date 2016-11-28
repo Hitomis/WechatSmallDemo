@@ -1,0 +1,5 @@
+<!--pages/canvas/canvas.wxml-->
+    <!-- CANVAS -->
+    <view style="font-size:50rpx;">CANVAS</view>
+    <canvas canvas-id="canvas1" style="width: 300px; height: 200px;"></canvas>
+    <canvas binderror="canvasIdErrorCallback" style="width: 400px; height: 500px;" canvas-id="secondCanvas"></canvas>

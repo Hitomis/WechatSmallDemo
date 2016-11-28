@@ -8,4 +8,5 @@
   <button bindtap="goForm">表单组件</button>
   <button bindtap="goOperaFeedback">操作反馈</button>
   <button bindtap="goMedia">媒体组件</button>
+  <button bindtap="goCanvas">自定义组件-画布</button>
 </scroll-view>
