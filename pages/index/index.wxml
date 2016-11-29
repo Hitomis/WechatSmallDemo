@@ -7,4 +7,5 @@
   <button bindtap="goBaseContent">基础内容</button>
   <button bindtap="goForm">表单组件</button>
   <button bindtap="goOperaFeedback">操作反馈</button>
+  <button bindtap="goMedia">媒体组件</button>
 </scroll-view>

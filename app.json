@@ -8,7 +8,10 @@
     "pages/scrollview/scrollview",
     "pages/baseContent/baseContent",
     "pages/form/form",
-    "pages/operaFeedback/operaFeedback"
+    "pages/operaFeedback/operaFeedback",
+    "pages/operaFeedback/navigate",
+    "pages/operaFeedback/redirect",
+    "pages/media/media"
 
   ],
   "window": {

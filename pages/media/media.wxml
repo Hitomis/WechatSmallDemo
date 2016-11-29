@@ -1,0 +1,21 @@
+<!--pages/media/media.wxml-->
+<scroll-view scroll-y>
+
+    <!-- IMAGE -->
+    <view style="font-size:50rpx;">IMAGE</view>
+    <block wx:for-items="{{array}}">
+        <view>{{item.text}}</view>
+        <image binderror="imageError" style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{src}}"></image>
+    </block>
+
+    <!-- VIDEO -->
+    <view style="margin-top:60rpx; font-size:50rpx;">VIDEO</view>
+    <video src="http://www.w3school.com.cn//i/movie.mp4" binderror="videoError"></video>
+    <video src="{{videoSrc}}" binderror="videoError"></video>
+    <button bindtap="bindButtonTap">获取视频</button>
+
+    <!-- MAP -->
+    <view style="margin-top:60rpx; font-size:50rpx;">MAP</view>
+    <map longitude="23.099994" latitude="113.324520" markers="{{markers}}" covers="{{covers}}" style="width: 375px; height: 200px;"></map>
+
+</scroll-view>

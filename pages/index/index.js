@@ -49,6 +49,11 @@ Page({
       url: '../operaFeedback/operaFeedback'
     })
   },
+  goMedia: function () {
+    wx.navigateTo({
+      url: '../media/media'
+    })
+  },
   onLoad: function () {
     console.log('onLoad')
     var that = this

@@ -42,4 +42,9 @@
         加载中...
     </loading>
     <button bindtap="loadingTap">点击弹出 loading</button>
+
+    <!-- NAVIGATOR -->
+    <view style="font-size:50rpx; margin-top:60rpx;">NAVIGATOR</view>
+     <navigator url="navigate?title=附带过来的数据：navigate" hover-class="navigator-hover">跳转到新页面</navigator>
+    <navigator url="redirect?title=附带过来的数据：redirect" redirect hover-class="other-navigator-hover">在当前页打开</navigator>
 </scroll-view>
