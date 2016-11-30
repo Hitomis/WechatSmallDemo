@@ -1,47 +1,88 @@
 <!--pages/form/form.wxml-->
 <scroll-view scroll-y>
-<view>BUTTON</view>
-<button size="default"> 默认大小的按钮</button>
-<button size="mini"> Mini 大小的按钮</button>
-<button plain>plain 镂空的按钮</button>
-<button loading>带 loading 图标的按钮</button>
-<button type="default">default 类型的按钮</button>
-<button type="primary">primary 类型的按钮</button>
-<button type="warn">warn 类型的按钮</button>
-<button hover-class="other-button-hover">指定按下样式的按钮</button>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view style="font-size:50rpx;">BUTTON</view>
+        <button size="default"> 默认大小的按钮</button>
+        <button size="mini"> Mini 大小的按钮</button>
+        <button plain>plain 镂空的按钮</button>
+        <button loading>带 loading 图标的按钮</button>
+        <button type="default">default 类型的按钮</button>
+        <button type="primary">primary 类型的按钮</button>
+        <button type="warn">warn 类型的按钮</button>
+        <button hover-class="other-button-hover">指定按下样式的按钮</button>
 
-<view style="margin-top:60rpx">CHECKBOX</view>
-<checkbox-group bindchange="checkboxChange">
-    <label wx:for-items="{{items}}" style="display:block">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}">
-            {{item.value}}
-        </checkbox>
-    </label>
-</checkbox-group>
+        <view style="font-size:50rpx; margin-top:60rpx">CHECKBOX</view>
+        <checkbox-group bindchange="checkboxChange">
+            <label wx:for-items="{{items}}" style="display:block">
+                <checkbox value="{{item.name}}" checked="{{item.checked}}">
+                    {{item.value}}
+                </checkbox>
+            </label>
+        </checkbox-group>
 
-<view style="margin-top:60rpx">RADIO</view>
-<radio-group bindchange="radioChange">
-    <label wx:for-items="{{items}}" style="display:block">
-        <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}">
-            <label for="{{item.name}}">{{item.value}}</label>
-        </radio>
-    </label>
-</radio-group>
+        <view style="font-size:50rpx; margin-top:60rpx">RADIO</view>
+        <radio-group bindchange="radioChange">
+            <label wx:for-items="{{items}}" style="display:block">
+                <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}">
+                    <label for="{{item.name}}">{{item.value}}</label>
+                </radio>
+            </label>
+        </radio-group>
 
-<view style="margin-top:60rpx">SWITCH</view>
-<text style="font-size:30rpx">type = "switch"</text>
-<switch style="display:block" type="switch" bindchange="switchChange"/>
-<text style="font-size:30rpx">type = "checkbox"</text>
-<switch style="display:block" type="checkbox" bindchange="checkboxChange"/>
+        <view style="font-size:50rpx; margin-top:60rpx">SWITCH</view>
+        <text style="font-size:30rpx">type = "switch"</text>
+        <switch style="display:block" type="switch" bindchange="switchChange"/>
+        <text style="font-size:30rpx">type = "checkbox"</text>
+        <switch style="display:block" type="checkbox" bindchange="checkboxChange"/>
 
-<view style="margin-top:60rpx">SLIDE</view>
-<text style="font-size:30rpx">设置 step = 5</text>
-<slider step="5"/>
-<text style="font-size:30rpx">设置 当前 value</text>
-<slider bindchange="slideChange" show-value/>
-<text style="font-size:30rpx">设置 max & min</text>
-<slider min="10" max="80" show-value/>
+        <view style="margin-top:60rpx">SLIDE</view>
+        <text style="font-size:30rpx">设置 step = 5</text>
+        <slider step="5"/>
+        <text style="font-size:30rpx">设置 当前 value</text>
+        <slider bindchange="slideChange" show-value/>
+        <text style="font-size:30rpx">设置 max & min</text>
+        <slider min="10" max="80" show-value/>
+
+        <view style="font-size:50rpx; margin-top:60rpx">PICKER</view>
+        <text style="font-size:30rpx">地区/普通选择器</text>
+        <picker bindchange="bindPickerChange" value="{{pos}}" range="{{array}}">
+            <view>
+                当前选择：{{array[pos]}}
+            </view>
+        </picker>
+        <text style="font-size:30rpx">时间选择器</text>
+        <picker mode="time" start="OO:OO" end="23:59" value="{{time}}" bindchange="bindTimeChange">
+            <view>
+                当前选择：{{time}}
+            </view>
+        </picker>
+        <text style="font-size:30rpx">日期选择器</text>
+        <picker fields="day" mode="date" start="2016-01-01" end="2016-12-31" bindchange="bindDateChange">
+            <view>
+                当前选择：{{date}}
+            </view>
+        </picker>
+
+        <view style="font-size:50rpx; margin-top:60rpx">INPUT</view>
+        <input placeholder-style="color:red" placeholder="占位符字体是红色的" />
+        <input placeholder="这是一个自动聚焦的输入框" auto-focus/>
+        <input  maxlength="10" placeholder="最大输入长度10" />
+        <view>
+            <view>你输入的是：{{text}}</view>
+            <input type="text" bindinput="bindKeyInput" placeholder="输入的内容同步到 View 中"/>
+        </view>
+        <input bindinput="bindReplaceInput" placeholder="输入两个1会变成2" />
+        <input bindinput="bindHideKeyboard" placeholder="输入123会自动收起键盘"/>
+        <input name='emoji' type="emoji" placeholder="这是一个带表情的输入框"/>
+        <input name='digit' type="digit" placeholder="带小数点的数字键盘"/>
+        <input name='card' type="idcard" placeholder="身份证输入键盘" />
 
 
+        <view class="btn-area">
+            <button form-type="submit">Submit</button>
+            <button formType="reset">Reset</button>
+        </view>
+
+    </form>
 
 </scroll-view>
