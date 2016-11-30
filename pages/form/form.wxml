@@ -28,12 +28,20 @@
     </label>
 </radio-group>
 
-<view style="margin-top:60rpx">Switch</view>
+<view style="margin-top:60rpx">SWITCH</view>
 <text style="font-size:30rpx">type = "switch"</text>
 <switch style="display:block" type="switch" bindchange="switchChange"/>
-
 <text style="font-size:30rpx">type = "checkbox"</text>
 <switch style="display:block" type="checkbox" bindchange="checkboxChange"/>
+
+<view style="margin-top:60rpx">SLIDE</view>
+<text style="font-size:30rpx">设置 step = 5</text>
+<slider step="5"/>
+<text style="font-size:30rpx">设置 当前 value</text>
+<slider bindchange="slideChange" show-value/>
+<text style="font-size:30rpx">设置 max & min</text>
+<slider min="10" max="80" show-value/>
+
 
 
 </scroll-view>

@@ -22,6 +22,9 @@ Page({
   checkboxChange: function (e) {
     console.log('checkbox 类型的 SwitchSwitch 发生 change 事件， value：', e.detail.value);
   },
+  slideChange: function (e) {
+    console.log('slide 发生 change 事件， value：', e.detail.value);
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },
