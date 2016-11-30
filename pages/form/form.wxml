@@ -28,7 +28,12 @@
     </label>
 </radio-group>
 
+<view style="margin-top:60rpx">Switch</view>
+<text style="font-size:30rpx">type = "switch"</text>
+<switch style="display:block" type="switch" bindchange="switchChange"/>
 
+<text style="font-size:30rpx">type = "checkbox"</text>
+<switch style="display:block" type="checkbox" bindchange="checkboxChange"/>
 
 
 </scroll-view>

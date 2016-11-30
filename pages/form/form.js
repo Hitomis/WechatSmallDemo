@@ -16,6 +16,12 @@ Page({
   radioChange: function(e) {
     console.log('radio 发生 change 事件， value：', e.detail.value);
   },
+  switchChange: function (e) {
+    console.log('switch 类型的 Swtich 发生 change 事件， value：', e.detail.value);
+  },
+  checkboxChange: function (e) {
+    console.log('checkbox 类型的 SwitchSwitch 发生 change 事件， value：', e.detail.value);
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },
