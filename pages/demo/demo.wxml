@@ -1,0 +1,30 @@
+<!--pages/demo/demo.wxml-->
+<scroll-view>
+
+<template name="msgItem">
+    <block wx:for-item="{{item}}" wx:for-index="index" wx:for-item="msg">
+        <view>
+            <text> {{index}}: {{msg}} </text>
+            <text> Time: {{time}} </text>
+        </view>
+    </block>
+  
+</template>
+<template is="msgItem" data="{{...item}}"/>
+
+<template name="odd">
+    <view>odd</view>
+</template>
+
+<template name="even">
+    <view>even</view>
+</template>
+
+<block wx:for="{{[1,2,3,4,5,6,7,8,9]}}">
+    <template is="{{item % 2 == 0 ? 'even' : 'odd'}}" />
+</block>
+
+
+
+
+</scroll-view>

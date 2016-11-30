@@ -1,0 +1,28 @@
+<!--pages/viewgroup/viewgroup.wxml-->
+<view>
+
+<view style="background: pink; height: 150px; line-height:150px; text-align: center; margin-top:10px;">  
+    块级显示区域
+</view>
+
+<view style="display: inline-block; background: red; margin-top:10px;"> 行级显示区域1 </view>
+---
+<view style="display: inline-block; background: red; margin-top:10px;"> 行级显示区域2 </view>
+
+<view style="display: flex; flex-direction:row; height: 60px; margin-top:10px;">
+
+    <view style="background: #09bb07; width: 60px; height: 60px"></view>
+    <view style="background: #f76260; width: 60px; height: 60px"></view>
+    <view style="background: #10aeff; width: 60px; height: 60px"></view>
+
+</view>
+
+<view style="display: flex: flex-direction:cloumn; height: 180px; width:60px; margin-top: 10px;">
+
+    <view style="background: #09bb07; width: 60px; height: 60px"></view>
+    <view style="background: #f76260; width: 60px; height: 60px"></view>
+    <view style="background: #10aeff; width: 60px; height: 60px"></view>
+
+</view>
+
+</view>

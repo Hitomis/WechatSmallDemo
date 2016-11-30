@@ -1,0 +1,23 @@
+<!--pages/scrollview/scrollview.wxml-->
+<view>
+    <view>vertical scroll</view>
+    <scroll-view scroll-y style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <view id="green" style="background: green; height: 150rpx;"></view>
+        <view id="red" style="background: red; height: 150rpx;"></view>
+        <view id="yellow" style="background: yellow; height: 150rpx;"></view>
+        <view id="blue" style="background: blue; height: 150rpx;"></view>
+    </scroll-view>
+</view>
+
+<button  bindtap="tap">click me to scroll into view </button>
+<button  bindtap="tapMove">click me to scroll</button>
+
+<view>
+    <view>horizontal scroll</view>
+    <scroll-view scroll-x style="width: 100%; height: 120px;">
+        <view id="green" style="display: inline-block; background: green; height: 120rpx; width: 450rpx;"></view>
+        <view id="red" style="display: inline-block; background: red; height: 120rpx; width: 450rpx;"></view>
+        <view id="yellow" style="display: inline-block; background: yellow; height: 120rpx; width: 450rpx;"></view>
+        <view id="blue" style="display: inline-block; background: blue; height: 120rpx; width: 450rpx;"></view>
+    </scroll-view>
+</view>

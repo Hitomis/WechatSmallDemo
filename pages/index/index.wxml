@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<scroll-view>
+  <button bindtap="click">Home 页面</button>
+  <button bindtap="goDemo">Demo 页面</button>
+  <button bindtap="goViewContainer">视图容器</button>
+  <button bindtap="goScrollView">​可滚动视图区域</button>
+  <button bindtap="goBaseContent">基础内容</button>
+  <button bindtap="goForm">表单组件</button>
+</scroll-view>

@@ -1,0 +1,34 @@
+<!--pages/form/form.wxml-->
+<scroll-view scroll-y>
+<view>BUTTON</view>
+<button size="default"> 默认大小的按钮</button>
+<button size="mini"> Mini 大小的按钮</button>
+<button plain>plain 镂空的按钮</button>
+<button loading>带 loading 图标的按钮</button>
+<button type="default">default 类型的按钮</button>
+<button type="primary">primary 类型的按钮</button>
+<button type="warn">warn 类型的按钮</button>
+<button hover-class="other-button-hover">指定按下样式的按钮</button>
+
+<view style="margin-top:60rpx">CHECKBOX</view>
+<checkbox-group bindchange="checkboxChange">
+    <label wx:for-items="{{items}}" style="display:block">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}">
+            {{item.value}}
+        </checkbox>
+    </label>
+</checkbox-group>
+
+<view style="margin-top:60rpx">RADIO</view>
+<radio-group bindchange="radioChange">
+    <label wx:for-items="{{items}}" style="display:block">
+        <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}">
+            <label for="{{item.name}}">{{item.value}}</label>
+        </radio>
+    </label>
+</radio-group>
+
+
+
+
+</scroll-view>

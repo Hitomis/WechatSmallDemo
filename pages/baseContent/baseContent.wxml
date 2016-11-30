@@ -1,0 +1,35 @@
+<!--pages/baseContent/baseContent.wxml-->
+<view>
+
+<view>ICON</view>
+<block wx:for-items="{{iconSize}}">
+    <icon type="success" size="{{item}}"/>
+</block>
+
+<scroll-view scroll-x>
+    <block wx:for-items="{{iconType}}">
+        <icon type="{{item}}" />
+    </block>
+</scroll-view>
+
+<block wx:for-items="{{iconColor}}">
+    <icon type="success" size="45" color="{{item}}" />
+</block>
+
+<view style="margin-top:20rpx">TEXT</view>
+
+<text>{{text}}</text>
+<view>
+    <button bindtap="add">add line</button>
+    <button bindtap="remove">remove line</button>
+</view>
+
+<view style="margin-top:20rpx">progress</view>
+<progress percent="{{progress}}" show-info/>
+<progress percent="40" stroke-width="10" show-info/>
+<progress percent="60" color="red" show-info/>
+<progress percent="80" color="blue" show-info active/>
+
+<button bindtap="progress">进度条</button>
+
+</view>

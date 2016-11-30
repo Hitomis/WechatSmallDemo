@@ -1,0 +1,4 @@
+/* pages/form/form.wxss */
+.other-button-hover{
+  background-color:red;
+}
