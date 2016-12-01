@@ -7,7 +7,8 @@
     "pages/viewgroup/viewgroup",
     "pages/scrollview/scrollview",
     "pages/baseContent/baseContent",
-    "pages/form/form"
+    "pages/form/form",
+    "pages/operaFeedback/operaFeedback"
 
   ],
   "window": {

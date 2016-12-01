@@ -6,4 +6,5 @@
   <button bindtap="goScrollView">​可滚动视图区域</button>
   <button bindtap="goBaseContent">基础内容</button>
   <button bindtap="goForm">表单组件</button>
+  <button bindtap="goOperaFeedback">操作反馈</button>
 </scroll-view>

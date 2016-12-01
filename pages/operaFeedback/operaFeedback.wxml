@@ -1,0 +1,26 @@
+<!--pages/operaFeedback/operaFeedback.wxml-->
+<scroll-view scroll-y>
+
+    <view style="font-size:50rpx;">ACTION-SHEET</view>
+    <button bindtap="actionSheetTap">弹出 actiona-sheet</button>
+    <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+        <block wx:for-items="{{actionSheetItems}}">
+            <action-sheet-item bindtap="bind{{item}}">
+                {{item}}
+            </action-sheet-item>
+        </block>
+        <action-sheet-cancel>取消</action-sheet-cancel>
+    </action-sheet>
+
+    <view style="font-size:50rpx; margin-top:60rpx;">MODAL</view>
+    <modal title="标题" confirm-text="confirm" cancel-text="cancel" hidden="{{modalHidden}}" bindconfirm="modalChange" bindcancel="modalChange">
+        这是对话框的内容。
+    </modal>
+    <modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2">
+        <view> 没有标题没有取消的modal </view>
+        <view> 内容可以插入节点 </view>
+    </modal>
+    <button type="default" bindtap="modalTap1">点击弹出modal1</button>
+    <button type="default" bindtap="modalTap2">点击弹出modal2</button>
+
+</scroll-view>

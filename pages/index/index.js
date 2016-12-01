@@ -44,6 +44,11 @@ Page({
       url: '../form/form'
     })
   },
+  goOperaFeedback: function () {
+    wx.navigateTo({
+      url: '../operaFeedback/operaFeedback'
+    })
+  },
   onLoad: function () {
     console.log('onLoad')
     var that = this
