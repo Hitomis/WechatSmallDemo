@@ -1,6 +1,7 @@
 <!--pages/operaFeedback/operaFeedback.wxml-->
 <scroll-view scroll-y>
 
+    <!-- ACTION-SHEET -->
     <view style="font-size:50rpx;">ACTION-SHEET</view>
     <button bindtap="actionSheetTap">弹出 actiona-sheet</button>
     <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
@@ -12,6 +13,7 @@
         <action-sheet-cancel>取消</action-sheet-cancel>
     </action-sheet>
 
+    <!-- MODAL -->
     <view style="font-size:50rpx; margin-top:60rpx;">MODAL</view>
     <modal title="标题" confirm-text="confirm" cancel-text="cancel" hidden="{{modalHidden}}" bindconfirm="modalChange" bindcancel="modalChange">
         这是对话框的内容。
@@ -23,4 +25,21 @@
     <button type="default" bindtap="modalTap1">点击弹出modal1</button>
     <button type="default" bindtap="modalTap2">点击弹出modal2</button>
 
+    <!-- TOAST -->
+    <view style="font-size:50rpx; margin-top:60rpx;">TOAST</view>
+    <toast duration="3000" hidden="{{toastHidden1}}" bindchange="toastchange1">
+        默认
+    </toast>
+    <button bindtap="toastTap1"> 点击弹出设置 duration 的 Toast </button>
+    <toast icon="cancel" hidden="{{toastHidden2}}" bindchange="toastChange2">
+        设置 ICON
+    </toast>
+    <button bindtap="toastTap2"> 点击弹出设置 ICON 的 Toast </button>
+
+    <!-- LOADING -->
+    <view style="font-size:50rpx; margin-top:60rpx;">LOADING</view>
+    <loading hidden="{{loadingHidden}}">
+        加载中...
+    </loading>
+    <button bindtap="loadingTap">点击弹出 loading</button>
 </scroll-view>

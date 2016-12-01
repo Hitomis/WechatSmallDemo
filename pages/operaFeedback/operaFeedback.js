@@ -7,7 +7,10 @@ var pageObject = {
     actionSheetHidden: true,
     actionSheetItems: items,
     modalHidden: true,
-    modalHidden2: true
+    modalHidden2: true,
+    toastHidden1: true,
+    toastHidden2: true,
+    loadingHidden: true
   },
   actionSheetTap: function () {
     this.setData({
@@ -38,6 +41,38 @@ var pageObject = {
     this.setData({
       modalHidden2: false
     });
+  },
+  toastTap1: function (e) {
+    this.setData({
+      toastHidden1: false
+    });
+  },
+  toastchange1: function (e) {
+    this.setData({
+      toastHidden1: true
+    });
+  },
+  toastTap2: function (e) {
+    this.setData({
+      toastHidden2: false
+    });
+  },
+  toastChange2: function (e) {
+    this.setData({
+      toastHidden2: true
+    });
+  },
+  loadingTap: function (e) {
+    this.setData({
+      loadingHidden: false
+    });
+    var that = this;
+    setTimeout(function () {
+      that.setData({
+        loadingHidden: true
+      });
+      that.update();
+    }, 3000);
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
